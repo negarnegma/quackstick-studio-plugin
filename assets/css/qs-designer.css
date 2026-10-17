@@ -1,0 +1,54 @@
+.qs-app{--bg:#C4996A;--fg:#3A2817;--card:#F1E3C8;--pond:#0E5E6F;--sun:#FFD23F;--bill:#FF7A1A;--line:#3A2817;color:var(--fg);font-size:1.05rem;line-height:1.7;background-color:#C4996A;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='s'><feTurbulence type='fractalNoise' baseFrequency='1.3' numOctaves='1' seed='9' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .22 0 0 0 0 .13 0 0 0 0 .06 0 0 0 9 -6.9'/></filter><rect width='260' height='260' filter='url(%23s)'/></svg>"),url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='p' x='0' y='0' width='100%25' height='100%25'><feTurbulence type='fractalNoise' baseFrequency='.8 .05' numOctaves='4' seed='3' stitchTiles='stitch' result='n'/><feDiffuseLighting in='n' lighting-color='%23cfa370' surfaceScale='1.8'><feDistantLight azimuth='50' elevation='75'/></feDiffuseLighting></filter><rect width='300' height='300' filter='url(%23p)'/></svg>");border-radius:6px;margin:1rem 0}
+.qs-app,.qs-app *,.qs-app *::before,.qs-app *::after{box-sizing:border-box}
+.qs-app :focus-visible{outline:3px solid var(--bill);outline-offset:2px}
+.qs-app h2,.qs-app h3{font-family:Lalezar,Chewy,cursive;font-weight:400;line-height:1.3;margin:0}
+.qs-app h2,.qs-app h3{font-family:Lalezar,Chewy,cursive;font-weight:400;line-height:1.3;margin:0}
+.qs-app h2{font-size:clamp(2rem,5vw,3rem)}
+.qs-app button{font:inherit;cursor:pointer;color:inherit}
+.qs-app .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.qs-app .btn{display:inline-block;background:var(--sun);color:#14213D;border:3px solid #14213D;border-radius:14px;padding:10px 20px;font-weight:800;text-decoration:none;box-shadow:4px 4px 0 #14213D}
+.qs-app .btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 #14213D}
+.qs-app .btn.alt{background:#fff;margin-inline-start:8px}
+.qs-app section{padding:56px 0}
+.qs-app .sub{max-width:52ch;margin:8px 0 28px}
+.qs-app .studio{background:var(--card);border-top:4px dashed var(--line);border-bottom:4px dashed var(--line)}
+.qs-app .lab{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;align-items:start}
+.qs-app .ctl h3{font-size:1.25rem;margin:14px 0 6px}
+.qs-app .chips{display:flex;flex-wrap:wrap;gap:6px}
+.qs-app .chip{border:2px solid var(--line);background:transparent;border-radius:99px;padding:3px 12px;font-weight:700;font-size:.95rem}
+.qs-app .chip[aria-pressed=true]{background:var(--pond);color:#fff;border-color:var(--pond)}
+.qs-app .sw{width:32px;height:32px;border-radius:50%;border:3px solid var(--line);padding:0}
+.qs-app .sw[aria-pressed=true]{outline:3px solid var(--bill);outline-offset:2px}
+.qs-app input[type=text]{font:inherit;width:100%;padding:8px 12px;border:2px solid var(--line);border-radius:10px;background:var(--bg);color:var(--fg)}
+.qs-app .rulerbox{overflow:auto;max-width:100%;padding-bottom:6px}
+.qs-app .rg{display:grid;grid-template-columns:24px auto;width:max-content;background:var(--bg);border:3px solid var(--line);border-radius:12px;overflow:hidden}
+.qs-app .rg .rk{background:var(--sun)}
+.qs-app .rg svg{display:block}
+.qs-app .rg>div>svg text{fill:#14213D;font:700 9px Vazirmatn,sans-serif}
+.qs-app .rg .rl{background:var(--sun)}
+.qs-app .stage{position:relative}
+.qs-app .stage svg.st{position:absolute}
+.qs-app .ghost{position:absolute;border:2px dashed var(--bill);border-radius:6px;font-size:.7rem;font-weight:800;color:var(--bill);display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.1}
+.qs-app .read{margin:10px 0;font-weight:800}
+.qs-app .note{font-size:.85rem;opacity:.8}
+.qs-app .tot{display:flex;justify-content:space-between;align-items:center;font-weight:800;margin-top:12px}
+.qs-app .studio{background:#E4CDA3}
+.qs-app .rg{border-radius:4px}
+.qs-app .rg>div>svg{background:#F3DDA0}
+.qs-app .tray{display:flex;flex-wrap:wrap;gap:6px}
+.qs-app .th{width:54px;height:54px;padding:3px;border:2px dashed var(--line);border-radius:10px;background:var(--card)}
+.qs-app .th svg{width:100%;height:100%}
+.qs-app .ps svg{width:100%;height:100%;display:block;pointer-events:none}
+.qs-app .ps.sel{outline:2px dashed var(--bill);outline-offset:3px}
+.qs-app .cam{position:absolute;border:2px dashed var(--bill);border-radius:12px;background:rgba(0,0,0,.28);pointer-events:none;color:#fff;font:800 9px Vazirmatn,sans-serif;display:flex;align-items:center;justify-content:center}
+.qs-app #pad{background:#fff;cursor:crosshair;touch-action:none}
+.qs-app .ctl label{display:flex;align-items:center;gap:8px;font-weight:700;margin:6px 0}
+.qs-app input[type=range]{flex:1;accent-color:#0E5E6F}
+.qs-app .rg,.qs-app .rulerbox{direction:ltr}
+.qs-app input[type=range]{direction:ltr}
+.qs-app h2{mix-blend-mode:multiply}
+.qs-app h2{text-shadow:0 1px 0 rgba(255,240,210,.5),0 -1px 0 rgba(40,20,0,.3)}
+.qs-app .studio{background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='p' x='0' y='0' width='100%25' height='100%25'><feTurbulence type='fractalNoise' baseFrequency='.8 .05' numOctaves='4' seed='3' stitchTiles='stitch' result='n'/><feDiffuseLighting in='n' lighting-color='%23f6e7c3' surfaceScale='1.8'><feDistantLight azimuth='50' elevation='75'/></feDiffuseLighting></filter><rect width='300' height='300' filter='url(%23p)'/></svg>");border:0;padding:12px 0;clip-path:polygon(0 12px,4% 4px,9% 14px,14% 5px,20% 13px,27% 3px,33% 12px,40% 5px,47% 14px,53% 4px,60% 13px,67% 5px,74% 14px,81% 3px,88% 12px,94% 5px,100% 11px,100% calc(100% - 10px),95% calc(100% - 3px),89% calc(100% - 12px),82% calc(100% - 4px),75% calc(100% - 13px),68% calc(100% - 3px),61% calc(100% - 11px),54% calc(100% - 4px),47% calc(100% - 12px),40% calc(100% - 3px),33% calc(100% - 13px),26% calc(100% - 5px),19% calc(100% - 11px),12% calc(100% - 3px),6% calc(100% - 12px),0 calc(100% - 4px))}
+.qs-toast{position:sticky;bottom:12px;margin:0 auto 16px;width:max-content;max-width:92%;background:var(--sun);color:#14213D;border:3px solid #14213D;border-radius:14px;padding:8px 16px;font-weight:800;box-shadow:4px 4px 0 #14213D;z-index:5}
+.qs-toast a{margin-inline-start:8px}
+@media(max-width:800px){.qs-app .lab{grid-template-columns:1fr}}

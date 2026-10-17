@@ -1,0 +1,22 @@
+.qsd{position:fixed;left:0;top:0;width:80px;height:80px;z-index:99998;pointer-events:none;will-change:transform}
+.qsd-svg{width:80px;height:80px;display:block;overflow:visible;transform-origin:50% 50%}
+.qsd-svg path[d^="M34"],.qsd-svg path[d^="M46"]{fill:none;stroke:#FF7A1A;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.qsd.walk .qsd-svg{animation:qsd-bob .3s ease-in-out infinite alternate}
+.qsd.walk .qsd-f1{animation:qsd-f .3s ease-in-out infinite alternate}
+.qsd.walk .qsd-f2{animation:qsd-f .3s ease-in-out infinite alternate-reverse}
+.qsd.nib .qsd-svg{animation:qsd-nib .25s ease-in-out infinite alternate}
+.qsd-say{position:absolute;bottom:92%;left:50%;transform:translateX(calc(-50% + var(--dx,0px))) scale(.8);width:max-content;max-width:min(260px,80vw);text-align:center;background:#fff;color:#3A2817;border:2px solid #3A2817;border-radius:12px;padding:2px 10px;font:400 15px Lalezar,Vazirmatn,sans-serif;opacity:0;transition:.15s}
+.qsd-say.ask{pointer-events:auto;width:230px}
+.qsd-opt{margin:6px 3px 0;background:#FFD23F;color:#14213D;border:2px solid #14213D;border-radius:10px;padding:0 10px;font:700 13px Vazirmatn,sans-serif;cursor:pointer}
+.qsd-say.on{opacity:1;transform:translateX(calc(-50% + var(--dx,0px))) scale(1)}
+.qsd-loot{position:fixed;left:0;top:0;width:48px;height:48px;z-index:99997;pointer-events:none;background-size:cover;background-position:center;border:2px solid #fff;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,.4)}
+.qsd-loot svg{width:100%;height:100%}
+.qsd-print{position:fixed;width:7px;height:5px;border-radius:50%;background:rgba(58,40,23,.45);z-index:99996;pointer-events:none;animation:qsd-fade 4s forwards}
+.qsd-toggle{position:fixed;left:12px;bottom:12px;z-index:99999;font:700 12px Vazirmatn,sans-serif;background:#FFD23F;color:#14213D;border:2px solid #14213D;border-radius:99px;padding:3px 12px;cursor:pointer;opacity:.85}
+.qsd-name{position:absolute;left:50%;top:76px;transform:translateX(-50%);background:#FFD23F;color:#14213D;border:2px solid #3A2817;border-radius:8px;padding:0 8px;font:700 11px Vazirmatn,sans-serif;white-space:nowrap;box-shadow:2px 2px 0 rgba(58,40,23,.5)}
+.qsd.hit .qsd-svg{animation:qsd-hit .45s ease-out}
+@keyframes qsd-hit{20%{margin-top:-18px}55%{margin-top:-6px}100%{margin-top:0}}
+@keyframes qsd-bob{to{margin-top:-4px}}
+@keyframes qsd-f{from{transform:translateX(-3px)}to{transform:translateX(3px)}}
+@keyframes qsd-nib{to{margin-top:10px}}
+@keyframes qsd-fade{to{opacity:0}}
