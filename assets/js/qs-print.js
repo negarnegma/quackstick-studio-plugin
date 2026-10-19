@@ -11,7 +11,7 @@ const save=(blob,name)=>{const a=document.createElement('a');a.href=URL.createOb
 const esc=t=>String(t).replace(/[<>&]/g,''),lab=()=>D.orders.map(o=>'#'+o.num).join(' ');
 const PS={pending:'منتظر تأیید مشتری',changes:'مشتری تغییر خواسته'};
 async function prepare(){
-  await document.fonts.load('40px Lalezar','قات‌قات Aa');
+  await document.fonts.load('40px Lalezar','کوَک‌کوَک Aa');
   const cache=new Map(),fails=[],warns=new Set();let n=0;items=[];$('#qsp-retry').style.display='none';$('#qsp-warn').innerHTML='';
   const total=D.orders.reduce((a,o)=>a+o.items.length,0),ras=async(sp,cm)=>{const k=JSON.stringify(sp)+'|'+cm;if(!cache.has(k))cache.set(k,await Q.rasterize(sp,cm));return cache.get(k)};
   D.orders.forEach(o=>{if(o.proof&&PS[o.proof])warns.add('سفارش #'+o.num+': '+PS[o.proof]+'. چاپ قبل از تأیید ریسک داره.')});

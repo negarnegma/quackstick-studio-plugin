@@ -37,7 +37,7 @@ add_shortcode( 'quackstick_landing', function () {
 	<header class="ql-sec ql-hero"><div class="ql-in ql-grid">
 		<div>
 			<span class="ql-kicker">فروشگاه استیکر اردکی</span>
-			<h1>استیکر با کمی قات‌قات.</h1>
+			<h1>استیکر با کمی کوَک‌کوَک.</h1>
 			<p>یه اردک آماده بردار، عکس یا نقاشی خودت رو استیکر کن، یا یه قاب گوشی بساز و پر از استیکرش کن. همه‌چیز رو قبل از چاپ با خط‌کش می‌سنجی.</p>
 			<p><a class="ql-btn" href="<?php echo esc_url( $d ); ?>">شروع طراحی</a> <a class="ql-btn ql-alt" href="#request">طراحی رو بسپار به ما</a></p>
 		</div>

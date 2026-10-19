@@ -1,8 +1,8 @@
 /* The pesky duck. Harmless: never captures clicks, sleeps for reduced-motion users, can be dismissed. */
 (function(){
 if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-const NAME=(window.QSDUCK&&QSDUCK.name)||'قات‌قاتی';
-const KEY='qs_duck_off',SAY=['قات!','اینجا چه خبره؟','این استیکر مال منه.','نگام نکن، دارم کار می‌کنم.','قات‌قات‌قات!','گرسنمه... دونه داری؟','بخرش بخرش!','یکی رو بردار، بقیه رو من می‌برم.','من '+NAME+'\u200cام؛ همکار شما.'];
+const NAME=(window.QSDUCK&&QSDUCK.name)||'کوَک‌کوَکی';
+const KEY='qs_duck_off',SAY=['کوَک!','اینجا چه خبره؟','این استیکر مال منه.','نگام نکن، دارم کار می‌کنم.','کوَک‌کوَک‌کوَک!','گرسنمه... دونه داری؟','بخرش بخرش!','یکی رو بردار، بقیه رو من می‌برم.','من '+NAME+'\u200cام؛ همکار شما.'];
 let off=false;try{off=localStorage.getItem(KEY)==='1'}catch(_){}
 const R=(a,b)=>a+Math.random()*(b-a),pick=a=>a[Math.floor(Math.random()*a.length)];
 const el=document.createElement('div');el.className='qsd';el.setAttribute('aria-hidden','true');
@@ -30,7 +30,7 @@ function drop(){if(loot){loot.remove();loot=null}if(lootOf){lootOf.style.opacity
 function tick(){
   const now=performance.now();let sp=1.7;
   if(st==='chase'){go(mx-60,my-70);sp=2.3;if(now>until)next()}
-  else if(st==='sleep'){sp=0;if(now>until){talk('قات؟');next()}}
+  else if(st==='sleep'){sp=0;if(now>until){talk('کوَک؟');next()}}
   else if(st==='flee'){sp=4.5;if(now>until)next()}
   const dx=tx-x,dy=ty-y,d=Math.hypot(dx,dy);
   if(sp&&d>3){x+=dx/d*sp;y+=dy/d*sp;dist+=sp;if(Math.abs(dx)>2)dir=dx>0?1:-1;if(dist>26){dist=0;print()}el.classList.add('walk')}
@@ -41,7 +41,7 @@ function tick(){
 addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY},{passive:true});
 document.addEventListener('click',e=>{const r=el.getBoundingClientRect();if(e.clientX>r.left-8&&e.clientX<r.right+8&&e.clientY>r.top-8&&e.clientY<r.bottom+8){quack();el.classList.add('hit');setTimeout(()=>el.classList.remove('hit'),450);const L=clickLine();talk(L,L.length>40?3600:2200);st='flee';until=performance.now()+(clicks===15?8000:2500);if(clicks===15)lastT=Date.now()+20000;go(Math.random()<.5?-80:innerWidth,R(0,innerHeight))}},true);
 let clicks=0;
-const CLICKS=['هی! قلقلکم می‌دی!','ای بابا! دارم کار می‌کنم.','قات قات قات... یعنی ولم کن.','حواست باشه، منقارم تیزه!','دلت اومد؟! من یه اردک بیچاره‌ام.','نون خشک داری؟ نداری؟ پس برو.','من اردک این فروشگاهم؛ حقوقم نون خشکه.','اگه یه استیکر بخری دیگه سیخونک نمی‌زنم.','کلیک نکن! قلقلکیم!','بازم؟! باشه، ولی این آخریشه. (دروغ گفتم.)','من '+NAME+'\u200cام، نه توپ بازی!','آخ آخ! بال‌هام!'];
+const CLICKS=['هی! قلقلکم می‌دی!','ای بابا! دارم کار می‌کنم.','کوَک کوَک کوَک... یعنی ولم کن.','حواست باشه، منقارم تیزه!','دلت اومد؟! من یه اردک بیچاره‌ام.','نون خشک داری؟ نداری؟ پس برو.','من اردک این فروشگاهم؛ حقوقم نون خشکه.','اگه یه استیکر بخری دیگه سیخونک نمی‌زنم.','کلیک نکن! قلقلکیم!','بازم؟! باشه، ولی این آخریشه. (دروغ گفتم.)','من '+NAME+'\u200cام، نه توپ بازی!','آخ آخ! بال‌هام!'];
 function clickLine(){clicks++;
   if(clicks===3)return 'سه بار شد‌ها! من '+NAME+'\u200cام، اردک مفت نیستم.';
   if(clicks===6)return 'دارم به اتحادیه‌ی اردک‌ها شکایت می‌کنم!';
@@ -56,7 +56,7 @@ const CTX=has('.qs-app')?'design':has('.qs-land')?'land':has('.qs-req-wrap')?'re
 const LINES={upload:['عه! این عکس خودته؟','چه عکس قشنگی! خودتی؟','این عکس خودته؟ منم یه عکس از خودم می‌خوام.'],
   sticker:['چه استیکر باحالی!','آفرین، قاب داره پر می‌شه.','یکی دیگه هم بچسبون، جا هست.'],
   cart:['ایول! تو سبده. یکی دیگه؟','بخرش بخرش! خوب انتخابی بود.'],
-  draw:['عه هنرمندی!','چه خطی! ادامه بده.'],caption:['کپشن قشنگیه!','قات‌قات! خوب نوشتی.'],
+  draw:['عه هنرمندی!','چه خطی! ادامه بده.'],caption:['کپشن قشنگیه!','کوَک‌کوَک! خوب نوشتی.'],
   'gift-ready':['مبارک باشه! قاب هدیه‌ات حاضره. تمش رو بنویس!'],'gift-set':['عالی! طراح‌ها کارشون رو شروع می‌کنن.'],
   request:['ثبت شد! به‌زودی توی تلگرام بهت پیام می‌دن.']};
 const TIPS={studio:['اندازه رو با نوار نارنجی روی خط‌کش چک کن؛ همون جاییه که استیکر چاپ می‌شه.','کپشن کوتاه‌تر، خواناتر چاپ می‌شه.'],

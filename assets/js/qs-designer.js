@@ -5,11 +5,11 @@ const $=s=>document.querySelector(s),{duck,ruler,INK,PHONES}=QS;
 const QSE=(t,d)=>document.dispatchEvent(new CustomEvent('qs:event',{detail:Object.assign({type:t},d||{})}));
 const fmt=n=>new Intl.NumberFormat('fa-IR').format(n)+' '+QSD.cur;
 const PRE=[
- {n:'سر قات‌قاتلو',o:{body:'#FFD23F',acc:'crown',bg:'#CDEBFF'},p:3.5},
+ {n:'سر کوَک‌کوَکلو',o:{body:'#FFD23F',acc:'crown',bg:'#CDEBFF'},p:3.5},
  {n:'اردک شیک‌پوش',o:{body:'#8FD694',acc:'top',bg:'#FFE3C2',shape:'square'},p:3.5},
  {n:'اردک کول',o:{body:'#FFD23F',acc:'glasses',bg:'#FFB3C7',cap:'خیلی کولم'},p:3.5},
  {n:'جوجه‌اردک کلاه‌بافتنی',o:{body:'#FFF1A8',acc:'beanie',bg:'#BFE6FF',shape:'blob'},p:3.5},
- {n:'اردک ببیونی',o:{body:'#FFFFFF',acc:'bow',bg:'#FFD23F',cap:'حمله قات‌قات'},p:3.5},
+ {n:'اردک ببیونی',o:{body:'#FFFFFF',acc:'bow',bg:'#FFD23F',cap:'حمله کوَک‌کوَک'},p:3.5},
  {n:'اردک کلاسیک',o:{body:'#FFD23F',acc:'none',bg:'#fff',shape:'blob'},p:3.5}];
 /* Studio */
 const S={size:8,shape:'circle',body:'#FFD23F',acc:'none',bg:'#CDEBFF',cap:'',unit:'cm',tru:false,ref:'none'};
@@ -158,6 +158,6 @@ $('#ubuy').onclick=()=>{const b=$('#ubuy'),o='افزودن به سبد';if(!U.im
 $('#usave').onclick=()=>{const b=$('#usave'),o='ذخیره برای قاب گوشی';if(!U.img)return flash(b,'اول عکس انتخاب کن',o);if(!$('#uok').checked)return flash(b,'تیک تأیید رو بزن',o);
   D.push({l:'عکس من '+(D.length+1),a:upArt(),sp:{k:'sk',u:upData()}});drawTray();flash(b,'ذخیره شد! توی کارگاه قاب گوشی پیداش کن',o)};
 $('#sprice').textContent=QSD.sketchCm+' سانت · '+fmt(PRICE[QSD.sketchCm]||0);
-document.fonts.load('20px Lalezar','قات Aa');
+document.fonts.load('20px Lalezar','کوَک Aa');
 render();renderCase();penUI();
 })();

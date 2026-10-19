@@ -181,11 +181,11 @@ add_filter( 'woocommerce_product_get_image', function ( $html, $product ) {
 }, 10, 2 );
 function qs_seed_presets() {
 	$list = array(
-		array( 'سر قات‌قاتلو', array( 'body' => '#FFD23F', 'acc' => 'crown', 'bg' => '#CDEBFF', 'shape' => 'circle', 'cap' => '' ) ),
+		array( 'سر کوَک‌کوَکلو', array( 'body' => '#FFD23F', 'acc' => 'crown', 'bg' => '#CDEBFF', 'shape' => 'circle', 'cap' => '' ) ),
 		array( 'اردک شیک‌پوش', array( 'body' => '#8FD694', 'acc' => 'top', 'bg' => '#FFE3C2', 'shape' => 'square', 'cap' => '' ) ),
 		array( 'اردک کول', array( 'body' => '#FFD23F', 'acc' => 'glasses', 'bg' => '#FFB3C7', 'shape' => 'circle', 'cap' => 'خیلی کولم' ) ),
 		array( 'جوجه‌اردک کلاه‌بافتنی', array( 'body' => '#FFF1A8', 'acc' => 'beanie', 'bg' => '#BFE6FF', 'shape' => 'blob', 'cap' => '' ) ),
-		array( 'اردک ببیونی', array( 'body' => '#FFFFFF', 'acc' => 'bow', 'bg' => '#FFD23F', 'shape' => 'circle', 'cap' => 'حمله قات‌قات' ) ),
+		array( 'اردک ببیونی', array( 'body' => '#FFFFFF', 'acc' => 'bow', 'bg' => '#FFD23F', 'shape' => 'circle', 'cap' => 'حمله کوَک‌کوَک' ) ),
 		array( 'اردک کلاسیک', array( 'body' => '#FFD23F', 'acc' => 'none', 'bg' => '#FFFFFF', 'shape' => 'blob', 'cap' => '' ) ),
 	);
 	$z = qs_sizes();

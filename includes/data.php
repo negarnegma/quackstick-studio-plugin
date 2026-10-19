@@ -32,13 +32,13 @@ function qs_opt( $k = null ) {
 		't_shipped'     => '{name} عزیز، سفارش #{order} ارسال شد. کد رهگیری: {tracking}',
 		'max_sheet'    => 30,
 		'fa'           => 1,
-		'duck_name'    => 'قات‌قاتی',         // Persian digits on the storefront
+		'duck_name'    => 'کوَک‌کوَکی',         // Persian digits on the storefront
 	);
 	$o = array_merge( $d, (array) get_option( 'qs_opts', array() ) );
 	foreach ( array( 'duck', 'craft', 'fa', 'proof', 'n_admin_order', 'n_proof', 'n_processing', 'n_completed', 'n_shipped' ) as $kk ) { $o[ $kk ] = ( empty( $o[ $kk ] ) || 'no' === $o[ $kk ] || '0' === $o[ $kk ] ) ? 0 : 1; } // WooCommerce checkboxes save yes/no
 	foreach ( array( 'case_base', 'sketch_cm', 'max_stickers', 'gift_min', 'max_sheet', 'proof_hours', 'cleanup_days' ) as $kk ) { $o[ $kk ] = (float) $o[ $kk ]; }
 	foreach ( array( 'sizes', 'tiers', 'sheet_prices', 'tiers_qty' ) as $kk ) { $o[ $kk ] = preg_replace( '/[^0-9.,:]/', '', (string) $o[ $kk ] ); }
-	$o['duck_name'] = trim( mb_substr( trim( strip_tags( (string) $o['duck_name'] ) ), 0, 24 ) ) ?: 'قات‌قاتی';
+	$o['duck_name'] = trim( mb_substr( trim( strip_tags( (string) $o['duck_name'] ) ), 0, 24 ) ) ?: 'کوَک‌کوَکی';
 	$o['tg']    = qs_tg_clean( $o['tg'] );
 	$o['duck_costume'] = in_array( $o['duck_costume'], array( 'auto', 'none', 'yalda', 'nowruz', 'winter' ), true ) ? $o['duck_costume'] : 'auto';
 	$o['sms_provider'] = in_array( $o['sms_provider'], array( 'kavenegar', 'webhook' ), true ) ? $o['sms_provider'] : '';

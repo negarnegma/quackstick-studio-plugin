@@ -15,7 +15,7 @@
       <h3>رنگ اردک</h3><div class="chips" id="c-body"></div>
       <h3>اکسسوری</h3><div class="chips" id="c-acc"></div>
       <h3>پس‌زمینه</h3><div class="chips" id="c-bg"></div>
-      <h3>کپشن</h3><input type="text" id="cap" dir="auto" maxlength="16" placeholder="مثلاً حمله قات‌قات" aria-label="کپشن">
+      <h3>کپشن</h3><input type="text" id="cap" dir="auto" maxlength="16" placeholder="مثلاً حمله کوَک‌کوَک" aria-label="کپشن">
       <h3>خط‌کش</h3><div class="chips" id="c-unit"></div>
       <h3>مقایسه با</h3><div class="chips" id="c-ref"></div>
       <div class="chips" style="margin-top:8px"><button class="chip" id="c-true" aria-pressed="false">اندازه‌ی واقعی (1:1)</button></div>
